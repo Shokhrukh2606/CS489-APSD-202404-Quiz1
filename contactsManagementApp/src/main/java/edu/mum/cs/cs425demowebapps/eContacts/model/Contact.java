@@ -78,15 +78,15 @@ public class Contact {
     }
     public String emailAdressesJSONString(){
         StringBuilder sb=new StringBuilder();
-        for(Email email: emailAdresses){
-            sb.append(toJSONString());
+        for(Email email: this.emailAdresses){
+            sb.append(email.toJSONString());
             sb.append(",");
         }
         return sb.toString();
     }
     public String phoneNumbersJSONString(){
         StringBuilder sb=new StringBuilder();
-        for(PhoneNumber phoneNumber: phoneNumbers){
+        for(PhoneNumber phoneNumber: this.phoneNumbers){
             sb.append(phoneNumber.toJSONString());
             sb.append(",");
         }
